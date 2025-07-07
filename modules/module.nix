@@ -4,7 +4,7 @@ with lib;
 
 let
   cfg = config.services.airspy-adsb;
-  pkg = import ./package.nix { inherit pkgs; };
+  pkg = import ../package.nix { inherit pkgs; };
 
 in
 {
