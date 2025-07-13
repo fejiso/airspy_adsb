@@ -43,7 +43,7 @@ pkgs.stdenv.mkDerivation {
 
   dontPatch = true;
   dontConfigure = true;
-  dontBuild = true;
+  dontBuild = false;
   dontCheck = true;
   dontFixup = true;
   dontStrip = true;
