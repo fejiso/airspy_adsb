@@ -36,7 +36,7 @@ pkgs.stdenv.mkDerivation {
     name = "airspy_adsb.tgz";
   };
 
-  sourceRoot = "source";
+  sourceRoot = ".";
   unpackCmd = ''
     mkdir source
     cd source
