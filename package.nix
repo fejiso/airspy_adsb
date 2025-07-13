@@ -38,8 +38,6 @@ pkgs.stdenv.mkDerivation {
 
   sourceRoot = ".";
   unpackCmd = ''
-    mkdir source
-    cd source
     tar xzf $src
   '';
 
