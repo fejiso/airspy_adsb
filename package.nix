@@ -43,9 +43,7 @@ pkgs.stdenv.mkDerivation {
     tar xzf $src
   '';
 
-  buildPhase = ''
-    # Nothing to build, we are using a pre-compiled binary
-  '';
+  dontBuild = true;
 
   installPhase = ''
     mkdir -p $out/bin
