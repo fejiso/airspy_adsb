@@ -36,11 +36,15 @@ pkgs.stdenv.mkDerivation {
     name = "airspy_adsb.tgz";
   };
 
-  sourceRoot = ".";
+  sourceRoot = "source";
   unpackCmd = ''
     mkdir source
     cd source
     tar xzf $src
+  '';
+
+  buildPhase = ''
+    # Nothing to build, we are using a pre-compiled binary
   '';
 
   installPhase = ''
