@@ -41,13 +41,6 @@ pkgs.stdenv.mkDerivation {
     tar xzf $src
   '';
 
-  dontPatch = true;
-  dontConfigure = true;
-  dontBuild = false;
-  dontCheck = true;
-  dontFixup = true;
-  dontStrip = true;
-  dontCompressDocs = true;
 
   installPhase = ''
     mkdir -p $out/bin
@@ -55,5 +48,6 @@ pkgs.stdenv.mkDerivation {
     chmod +x $out/bin/airspy_adsb
   '';
 
+  nativeBuildInputs = [ pkgs.autoPatchelfHook ];
   buildInputs = [ pkgs.libusb1 ];
 }
