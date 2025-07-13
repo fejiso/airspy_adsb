@@ -43,7 +43,13 @@ pkgs.stdenv.mkDerivation {
     tar xzf $src
   '';
 
+  dontPatch = true;
+  dontConfigure = true;
   dontBuild = true;
+  dontCheck = true;
+  dontFixup = true;
+  dontStrip = true;
+  dontCompressDocs = true;
 
   installPhase = ''
     mkdir -p $out/bin
